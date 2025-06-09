@@ -1,0 +1,53 @@
+$componente-name: "c-line-footer";
+
+.#{$componente-name} {
+  background-color: map-color(map-white);
+  display: grid;
+  grid-area: line-footer;
+  grid-template-columns: 1fr;
+  height: auto;
+  margin: 0 auto;
+  max-width: $global-max-width;
+  width: 100%;
+  @include breakpoint(640-up) {
+    grid-template-columns: 1fr calc($global-module-size * 5.5);
+  }
+  &__full {
+    height: ($global-module-size-ssss);
+    shape-rendering: crispEdges;
+    width: 100%;
+  }
+  &__colored {
+    fill: none;
+    height: 100%;
+    overflow: visible;
+    shape-rendering: crispEdges;
+    stroke: map-color(map-blue);
+    width: 100%;
+    &--smoth {
+      shape-rendering: auto;
+    }
+  }
+  &__mono {
+    stroke: map-color(map-grey-darken-10);
+    fill: none;
+    overflow: visible;
+  }
+  &__right {
+    display: none;
+    overflow: hidden;
+
+    @include breakpoint(640-up) {
+      display: block;
+      height: ($global-module-size-ssss);
+      overflow: visible;
+      width: 100%;
+    }
+  }
+  &__background {
+    fill: map-color(map-white);
+    height: 100%;
+    overflow: visible;
+    width: 100%;
+  }
+}

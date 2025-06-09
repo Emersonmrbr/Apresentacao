@@ -1,0 +1,60 @@
+$componente-name: "c-card";
+
+.#{$componente-name} {
+	font-size: medium;
+	display: flex;
+	flex-direction: column;
+
+	@include breakpoint(1280-up) {
+		display: grid;
+	}
+	&__title {
+		text-transform: capitalize;
+		font-size: $global-font-size-medium;
+		grid-row: 1/2;
+		&--highlights {
+			text-transform: uppercase;
+			font-size: $global-font-size-medium;
+
+			@include breakpoint(640-up) {
+				font-size: $global-font-size-large;
+			}
+		}
+
+		@include breakpoint(640-up) {
+			font-size: $global-font-size-medium;
+		}
+	}
+	&__text {
+		font-size: $global-font-size-small;
+		grid-row: 2/3;
+		height: auto;
+		line-height: $global-line-height-medium;
+		padding: 0;
+		text-align: justify;
+
+		@include breakpoint(640-up) {
+			font-size: $global-font-size-medium;
+			line-height: $global-line-height-large;
+		}
+	}
+	&__image {
+		width: ($global-module-size * 6);
+		height: auto;
+		grid-row: 2/3;
+
+		@include breakpoint(640-up) {
+			width: ($global-module-size * 10);
+		}
+
+		@include breakpoint(800-up) {
+			width: ($global-module-size * 12);
+		}
+	}
+	&--right {
+		grid-column: 2/3;
+	}
+	&--left {
+		grid-column: 1/2;
+	}
+}

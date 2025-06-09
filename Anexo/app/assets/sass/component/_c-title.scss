@@ -1,0 +1,12 @@
+$componente-name: "c-title";
+
+.#{$componente-name} {
+	text-transform: uppercase;
+	font-size: $global-font-size-medium;
+	padding-top: ($global-module-size * 0.5);
+
+	@include breakpoint(640-up) {
+		font-size: $global-font-size-large;
+		padding-top: $global-module-size;
+	}
+}

@@ -1,0 +1,34 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
+.l-header {
+  background-color: color(solid-secondary);
+  column-gap: v(space-6xs);
+  display: grid;
+  grid: 'top top' auto 'logo button-mobile' auto 'menu-flyout-1 menu-flyout-2' auto 'line line' auto / 1fr 1fr;
+  height: auto;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: v(size-max-width);
+  overflow: visible;
+  padding: v(space-xs) v(padding-small) 0 v(padding-small);
+  position: fixed;
+  transition: v(transition-function-header);
+  width: 100%;
+  z-index: z-index(above);
+
+  &.has-sticker {
+    box-shadow: 0 v(space-l) v(space-l) 0 rgba(0, 0, 0, 0.2);
+    padding: v(padding-small);
+  }
+
+  @include breakpoint(small-up) {
+    grid: 'top top' auto 'logo menu' auto 'menu-flyout menu-flyout' auto 'button-close button-close' auto 'line line' auto/ 250px 1fr;
+    padding: v(space-l) v(padding-default) 0 v(padding-default);
+
+    &.has-sticker {
+      padding: 0 v(padding-small);
+    }
+  }
+}

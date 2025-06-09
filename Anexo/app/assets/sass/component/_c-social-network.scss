@@ -1,0 +1,58 @@
+$componente-name: "c-social-network";
+
+.#{$componente-name} {
+	align-items: center;
+	display: grid;
+	grid-area: social-network;
+	grid-template-columns: 1fr;
+	height: calc($global-module-size * 2);
+	margin: 0;
+	padding: 0;
+	width: auto;
+	@include breakpoint(400-up) {
+		grid-template-columns: calc($global-module-size * 6) 1fr;
+	}
+	@include breakpoint(720-up) {
+		grid-template-columns: 1fr ($global-module-size * 6);
+	}
+
+	&__container {
+		align-items: center;
+		column-gap: calc($global-module-size / 10);
+		display: grid;
+		grid-column: 1 / 2;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: flex-start;
+		@include breakpoint(400-up) {
+			gap: 0;
+		}
+		@include breakpoint(720-up) {
+			grid-column: 2 / -1;
+			justify-items: flex-end;
+		}
+	}
+
+	@include breakpoint(720-up) {
+		height: calc($global-module-size * 5);
+	}
+
+	&__icon {
+		fill: map-color(map-blue);
+		height: ($global-module-size);
+		margin: 0;
+		padding: 0;
+		transition: $transition-duration-exit;
+		width: calc($global-module-size);
+		&:hover {
+			background-color: map-color(map-grey-darken-10);
+			padding: calc($global-padding-size-xxxs);
+		}
+	}
+	&__link {
+		display: block;
+		height: ($global-module-size);
+	}
+	&__item {
+		fill: map-color(map-blue);
+	}
+}

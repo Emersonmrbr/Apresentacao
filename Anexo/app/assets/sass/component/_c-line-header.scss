@@ -1,0 +1,56 @@
+$componente-name: "c-line-header";
+
+.#{$componente-name} {
+	display: grid;
+	grid-area: line;
+	grid-template-columns: auto ($global-module-size * 2.5);
+	height: auto;
+	overflow: visible;
+	transition: $transition-function-header;
+	width: 100%;
+	&.has-sticker {
+		height: 0;
+		padding: 0;
+	}
+	&__full {
+		grid-column: 1 / -1;
+		overflow: visible;
+		height: 10px;
+		width: 100%;
+		shape-rendering: crispEdges;
+		transform-origin: 100% 100%;
+		@include breakpoint(720-up) {
+			grid-column: 1 / 2;
+		}
+	}
+	&__right {
+		height: 0;
+		width: 0;
+		overflow: hidden;
+		transform-origin: 100% 0%;
+		transition: $transition-function-header;
+		@include breakpoint(720-up) {
+			grid-column: 2 / 3;
+			height: 10px;
+			overflow: visible;
+			width: 100%;
+		}
+	}
+	&__item {
+		fill: none;
+		shape-rendering: crispEdges;
+		stroke-width: 0.05rem;
+		stroke: map-color(map-grey);
+		@-moz-document url-prefix() {
+			stroke-width: 1px;
+		}
+		&--color {
+			shape-rendering: auto;
+			stroke: map-color(map-blue);
+		}
+		&.has-sticker {
+			height: 0;
+			transform: scale(0, 1);
+		}
+	}
+}

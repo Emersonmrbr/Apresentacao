@@ -1,0 +1,22 @@
+$componente-name: "l-footer";
+
+.#{$componente-name} {
+	background-color: map-color(map-grey);
+	color: map-color(map-white);
+	display: grid;
+	grid-area: footer;
+	grid: "description" $global-module-size "local" $global-module-size "contact " auto "social-network " auto "copyright" auto / 1fr;
+	height: auto;
+	margin: 0 auto;
+	max-width: $global-max-width;
+	padding: 0 ($global-padding-size-xxxs);
+	width: 100%;
+
+	@include breakpoint(720-up) {
+		grid: "description local" calc($global-module-size * 2) "contact social-network" auto "copyright ." auto / auto auto;
+	}
+
+	@include breakpoint(1280-up) {
+		padding: 0 ($global-padding-size-xs);
+	}
+}

@@ -1,0 +1,20 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
+.l-body {
+  background-color: color(solid-secondary);
+  display: grid;
+  grid: 'header ' auto 'main' auto 'footer' auto 'line-footer' auto/ 1fr;
+  margin: 0 auto;
+  max-width: v(size-max-width);
+  width: 100%;
+
+  @include breakpoint(small-up) {
+    grid: 'header ' auto 'main' auto 'footer' auto 'line-footer' auto/ 1fr;
+  }
+
+  @include breakpoint(large-up) {
+    grid: 'header' auto 'main' auto 'footer' auto 'line-footer' auto/ 1fr;
+  }
+}

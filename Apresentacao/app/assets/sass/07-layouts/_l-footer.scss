@@ -1,0 +1,26 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
+.l-footer {
+  align-items: center;
+  background-color: color(tertiary);
+  color: color(solid-secondary);
+  display: grid;
+  grid-area: footer;
+  grid:
+    'description' v(space-6xs) 'local' v(space-6xs)
+    'contact ' auto 'social-network ' auto 'copyright' auto / 1fr;
+  height: auto;
+  margin: 0 auto;
+  max-width: v(size-max-width);
+  padding: 0 v(padding-small);
+  width: 100%;
+
+  @include breakpoint(small-up) {
+    grid:
+      'description local' auto 'contact social-network' calc(v(space-8xl) * 2)
+      'copyright .' auto / auto auto;
+    padding: 0 v(padding-default);
+  }
+}

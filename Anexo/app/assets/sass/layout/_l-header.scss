@@ -1,0 +1,34 @@
+$componente-name: "l-header";
+
+.#{$componente-name} {
+	background-color: map-color(map-white);
+	column-gap: calc($global-module-size * 0.2);
+	display: grid;
+	grid: "top top" auto "logo logo" auto "slogan icon" auto "line line" auto / 1fr;
+	height: auto;
+	justify-items: center;
+	margin: 0 auto;
+	max-width: $global-max-width;
+	overflow: visible;
+	padding: ($global-padding-size-xxs) ($global-padding-size-xxxs) 0;
+	position: fixed;
+	transition: $transition-function-header;
+	width: 100%;
+	z-index: z-index(above);
+	&.has-sticker {
+		box-shadow: 0 $global-module-size-ssss $global-module-size-xxxs 0 rgba(0, 0, 0, 0.2);
+		padding: ($global-padding-size-xxxs) ($global-padding-size-xxxs);
+	}
+	@include breakpoint(720-up) {
+		grid: "top top top" auto "logo slogan icon" auto "line line line" auto / auto 1fr;
+		padding: ($global-padding-size-xs) ($global-padding-size-xxs) 0 ($global-padding-size-xxs);
+		gap: 0;
+	}
+	@include breakpoint(1280-up) {
+		grid: "top top top" auto "logo slogan icon" auto "line line line" auto / auto 1fr;
+		padding: ($global-padding-size-s) ($global-padding-size-xs) 0;
+		&.has-sticker {
+			padding: 0 ($global-padding-size-xs);
+		}
+	}
+}

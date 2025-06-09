@@ -1,0 +1,14 @@
+$componente-name: "c-slogan";
+
+.#{$componente-name} {
+	grid-area: slogan;
+	text-transform: none;
+	font-size: $global-font-size-medium;
+	align-self: center;
+	justify-self: center;
+	font-weight: 900;
+
+	@include breakpoint(1120-up) {
+		font-size: $global-font-size-large;
+	}
+}

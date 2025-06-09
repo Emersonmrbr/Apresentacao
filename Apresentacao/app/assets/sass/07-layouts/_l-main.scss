@@ -1,0 +1,17 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
+.l-main {
+  background-color: color(solid-secondary);
+  color: color(text);
+  grid-area: main;
+  margin: 0 auto;
+  padding: v(padding-small);
+  width: 100%;
+  max-width: v(size-max-width);
+
+  @include breakpoint(small-up) {
+    padding: v(padding-default) 0;
+  }
+}

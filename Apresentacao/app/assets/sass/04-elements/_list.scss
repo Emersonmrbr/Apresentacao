@@ -1,0 +1,12 @@
+::marker {
+  color: var(--color-tertiary);
+}
+
+li,
+ol {
+  list-style: none;
+
+  &::marker {
+    display: none;
+  }
+}

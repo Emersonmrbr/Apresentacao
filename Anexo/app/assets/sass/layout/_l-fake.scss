@@ -1,0 +1,6 @@
+$componente-name: "l-fake";
+
+.#{$componente-name} {
+	grid-area: header;
+	background-color: map-color(map-white);
+}

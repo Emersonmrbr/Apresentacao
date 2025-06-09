@@ -1,0 +1,66 @@
+$breakpoints: (
+  'small': 48em,
+  // 768px
+  'medium': 64em,
+  // 1024px
+  'large': 90em,
+  // 1440px
+  'extra-large': 120em, // 1920px
+);
+
+@mixin breakpoint($point) {
+  @if $point == 'small-down' {
+    @media (max-width: 47.9375em) {
+      // Up to 768px
+      @content;
+    }
+  } @else if $point == 'small-up' {
+    @media (min-width: 48em) {
+      // From 768px
+      @content;
+    }
+  } @else if $point == 'medium-down' {
+    @media (max-width: 63.9375em) {
+      // Up to 1024px
+      @content;
+    }
+  } @else if $point == 'medium-up' {
+    @media (min-width: 64em) {
+      // From 1024px
+      @content;
+    }
+  } @else if $point == 'large-down' {
+    @media (max-width: 89.9375em) {
+      // Up to 1440px
+      @content;
+    }
+  } @else if $point == 'large-up' {
+    @media (min-width: 90em) {
+      // From 1440px
+      @content;
+    }
+  } @else if $point == 'extra-large-down' {
+    @media (max-width: 119.9375em) {
+      // Up to 1920px
+      @content;
+    }
+  } @else if $point == 'extra-large-up' {
+    @media (min-width: 120em) {
+      // From 1920px
+      @content;
+    }
+  } @else {
+    @media (min-width: '#{calc($point / 16)}em') {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-between($min-point, $max-point) {
+  $min-size: map-get($breakpoints, $min-point);
+  $max-size: map-get($breakpoints, $max-point);
+
+  @media (min-width: $min-size) and (max-width: $max-size) {
+    @content;
+  }
+}

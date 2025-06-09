@@ -1,0 +1,22 @@
+$componente-name: "l-main";
+
+.#{$componente-name} {
+	background-color: map-color(map-white);
+	color: map-color(map-grey);
+	grid-area: main;
+	margin: 0 auto;
+	padding: ($global-padding-size-xxxs);
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	height: auto;
+	width: 100%;
+
+	@include breakpoint(640-up) {
+		padding: ($global-padding-size-xxs);
+	}
+
+	@include breakpoint(1280-up) {
+		padding: ($global-padding-size-xs);
+	}
+}

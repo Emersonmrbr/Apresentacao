@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 61 61"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="facebook.svg"
+   version="1.1"
+   id="svg2449"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2443" />
+  <sodipodi:namedview
+     inkscape:zoom="12.344262"
+     inkscape:cx="30.013944"
+     inkscape:cy="30.5"
+     id="namedview2445"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0" />
+  <path
+     d="m 26.265,46.82 h 6.744 V 30.498 h 4.499 l 0.596,-5.624 h -5.095 l 0.007,-2.816 c 0,-1.466 0.14,-2.253 2.244,-2.253 h 2.812 V 14.18 h -4.5 c -5.405,0 -7.307,2.729 -7.307,7.317 v 3.377 h -3.369 v 5.625 h 3.369 z M 0.5,0.5 h 60 v 60 h -60 z"
+     id="path2447" />
+</svg>

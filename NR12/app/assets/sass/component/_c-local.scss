@@ -1,0 +1,13 @@
+$componente-name: "c-local";
+
+.#{$componente-name} {
+	grid-area: local;
+	align-self: center;
+	justify-self: flex-start;
+	padding: 0;
+	margin: 0;
+
+	@include breakpoint(640-up) {
+		justify-self: flex-end;
+	}
+}

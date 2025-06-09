@@ -1,0 +1,257 @@
+// ==========================================================================
+//Fonts
+// ==========================================================================
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+// webfatorial
+// ==========================================================================
+
+$webfatorial-colors: (
+	"webfatorial-error": #ec5840,
+	"webfatorial-gray-1": #363636,
+	"webfatorial-gray-2": #4f4f4f,
+	"webfatorial-gray-3": #828282,
+	"webfatorial-gray-4": #bdbdbd,
+	"webfatorial-gray-5": #e0e0e0,
+	"webfatorial-primary": #157bad,
+	"webfatorial-secondary": #06618c,
+	"webfatorial-success": #3cc368,
+	"webfatorial-warning": #f5a600,
+	"webfatorial-white": #fcfcfc,
+);
+
+@function webfatorial-color($webcolor) {
+	@return map-get($webfatorial-colors, $webcolor);
+}
+
+// Núcleo MAP colors
+// ==========================================================================
+$map-colors: (
+	"map-black": #000000,
+	"map-blue-darken-10":
+		darken(
+			$color: #36a9e1,
+			$amount: 10%,
+		),
+	"map-blue-darken-50":
+		darken(
+			$color: #36a9e1,
+			$amount: 50%,
+		),
+	"map-blue-darken-90":
+		darken(
+			$color: #36a9e1,
+			$amount: 90%,
+		),
+	"map-blue-lighten-10":
+		lighten(
+			$color: #36a9e1,
+			$amount: 10%,
+		),
+	"map-blue-lighten-50":
+		lighten(
+			$color: #36a9e1,
+			$amount: 50%,
+		),
+	"map-blue-lighten-90":
+		lighten(
+			$color: #36a9e1,
+			$amount: 90%,
+		),
+	"map-blue": #36a9e1,
+	"map-grey-darken-10":
+		darken(
+			$color: #706f6f,
+			$amount: 10%,
+		),
+	"map-grey-darken-30":
+		darken(
+			$color: #706f6f,
+			$amount: 30%,
+		),
+	"map-grey-darken-90":
+		darken(
+			$color: #706f6f,
+			$amount: 90%,
+		),
+	"map-grey-lighten-10":
+		lighten(
+			$color: #706f6f,
+			$amount: 10%,
+		),
+	"map-grey-lighten-50":
+		lighten(
+			$color: #706f6f,
+			$amount: 50%,
+		),
+	"map-grey-lighten-90":
+		lighten(
+			$color: #706f6f,
+			$amount: 90%,
+		),
+	"map-grey": #706f6f,
+	"map-grey-transparent": #706f6f99,
+	"map-white": #ffffff,
+);
+
+@function map-color($color) {
+	@return map-get($map-colors, $color);
+}
+
+// Social Media
+// ==========================================================================
+
+$social-media-colors: (
+	"facebook": #3b5998,
+	"github": #333,
+	"instagram": #e4405f,
+	"linkedin": #0077b5,
+	"twitter": #00aced,
+	"youtube": #cd201f,
+);
+
+@function msocial-media-color($socialcolor) {
+	@return map-get($social-media-colors, $socialcolor);
+}
+
+// ==========================================================================
+// Measures
+// ==========================================================================
+
+$global-max-width-raw: 1944;
+$global-max-width: rem($global-max-width-raw);
+
+$global-font-size-large: rem(20);
+$global-font-size-larger: rem(26);
+$global-font-size-medium: rem(16);
+$global-font-size-small: rem(12);
+$global-font-size-smaller: rem(10);
+
+$global-font-weight-bold: 700;
+$global-font-weight-bolder: 900;
+$global-font-weight-light: 300;
+$global-font-weight-lighter: 100;
+$global-font-weight-normal: 500;
+
+$global-line-height-large: 2;
+$global-line-height-larger: 2.5;
+$global-line-height-medium: 1.5;
+$global-line-height-small: 1;
+$global-line-height-smaller: 0.5;
+
+$global-radius: rem(5);
+$global-module-size: rem(50);
+$global-width-header: calc($global-module-size * 5);
+$global-width-header-mobile: calc($global-module-size * 3);
+$global-height-header: calc($global-module-size * 1.1);
+$global-height-header-mobile: calc($global-module-size * 0.9);
+
+$global-module-size: calc($global-module-size * 1);
+$global-module-size-s: calc($global-module-size * 0.875);
+$global-module-size-ss: calc($global-module-size * 0.75);
+$global-module-size-sss: calc($global-module-size * 0.625);
+$global-module-size-ssss: calc($global-module-size * 0.5);
+$global-module-size-xs: calc($global-module-size * 0.375);
+$global-module-size-xxs: calc($global-module-size * 0.25);
+$global-module-size-xxxs: calc($global-module-size * 0.125);
+$global-module-size-l: calc($global-module-size * 1.125);
+$global-module-size-sl: calc($global-module-size * 1.25);
+$global-module-size-ssl: calc($global-module-size * 1.375);
+$global-module-size-sssl: calc($global-module-size * 1.5);
+$global-module-size-xl: calc($global-module-size * 1.625);
+$global-module-size-xxl: calc($global-module-size * 1.75);
+$global-module-size-xxxl: calc($global-module-size * 1.875);
+$global-module-size-sxl: calc($global-module-size * 2);
+$global-module-size-sxxl: calc($global-module-size * 2.5);
+
+$global-padding-size: calc($global-module-size * 1);
+$global-padding-size-s: calc($global-module-size * 0.875);
+$global-padding-size-ss: calc($global-module-size * 0.75);
+$global-padding-size-sss: calc($global-module-size * 0.625);
+$global-padding-size-ssss: calc($global-module-size * 0.5);
+$global-padding-size-xs: calc($global-module-size * 0.375);
+$global-padding-size-xxs: calc($global-module-size * 0.25);
+$global-padding-size-xxxs: calc($global-module-size * 0.125);
+$global-padding-size-l: calc($global-module-size * 1.125);
+$global-padding-size-sl: calc($global-module-size * 1.25);
+$global-padding-size-ssl: calc($global-module-size * 1.375);
+$global-padding-size-sssl: calc($global-module-size * 1.5);
+$global-padding-size-xl: calc($global-module-size * 1.625);
+$global-padding-size-xxl: calc($global-module-size * 1.75);
+$global-padding-size-xxxl: calc($global-module-size * 1.875);
+$global-padding-size-xxxxl: calc($global-module-size * 2);
+
+$global-margin-size: calc($global-module-size * 1);
+$global-margin-size-s: calc($global-module-size * 0.875);
+$global-margin-size-ss: calc($global-module-size * 0.75);
+$global-margin-size-sss: calc($global-module-size * 0.625);
+$global-margin-size-ssss: calc($global-module-size * 0.5);
+$global-margin-size-xs: calc($global-module-size * 0.375);
+$global-margin-size-xxs: calc($global-module-size * 0.25);
+$global-margin-size-xxxs: calc($global-module-size * 0.125);
+$global-margin-size-l: calc($global-module-size * 1.125);
+$global-margin-size-sl: calc($global-module-size * 1.25);
+$global-margin-size-ssl: calc($global-module-size * 1.375);
+$global-margin-size-sssl: calc($global-module-size * 1.5);
+$global-margin-size-xl: calc($global-module-size * 1.625);
+$global-margin-size-xxl: calc($global-module-size * 1.75);
+$global-margin-size-xxxl: calc($global-module-size * 1.875);
+$global-margin-size-xxxl: calc($global-module-size * 2);
+
+$slice-height-big: calc($global-module-size / 13);
+$slice-height-small: calc($global-module-size / 75);
+$slice-height: calc($global-module-size / 20);
+$slice-margin: calc($global-module-size / 10);
+$slice-translate: calc($slice-height-big / 2);
+$slice-width: calc($global-module-size / 1.5);
+// ==========================================================================
+// Transitions
+// ==========================================================================
+
+$transition-duration: 305ms;
+$transition-duration-complex: 385ms;
+$transition-duration-entrance: 235ms;
+$transition-duration-exit: 205ms;
+$transition-duration-fast: 150ms;
+
+$transition-daley-middle: 500ms;
+$transition-daley-none: 0ms;
+
+$transition-function-ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$transition-function-ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$transition-function-ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$transition-function-ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$transition-function-ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+$transition-function-ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+$transition-function-elastic: cubic-bezier(0.175, 0.885, 0.41, 1.46);
+
+$transition-function-padding-link: padding 450ms cubic-bezier(0.05, 1, 0.8, 1) 0ms;
+$transition-function-transform-link: transform 337.5ms cubic-bezier(0.05, 1, 0.8, 1) 0ms;
+// Sticky
+$transition-function-header: 450ms ease-in;
+// Menu mobile
+$transition-function-header-mobile: 225ms ease-in;
+// Link
+$transition-function-line: all 450ms cubic-bezier(0.05, 1, 0.8, 1) 0ms;
+$transition-function-line-main: padding-bottom 450ms cubic-bezier(0.05, 1, 0.8, 1), opacity 450ms cubic-bezier(0.05, 1, 0.8, 1);
+
+// ==========================================================================
+// Others
+// ==========================================================================
+
+$z-indexes: (
+	"above": 500,
+	"below": -1,
+	"default": 1,
+	"dropdown": 200,
+	"modal": 400,
+	"overlay": 300,
+);
+
+@function z-index($layer) {
+	@return map-get($z-indexes, $layer);
+}

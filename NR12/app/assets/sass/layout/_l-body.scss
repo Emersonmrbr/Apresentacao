@@ -1,0 +1,16 @@
+$componente-name: "l-body";
+
+.#{$componente-name} {
+	background-color: map-color(map-white);
+	display: grid;
+	grid: "header " auto "main" auto "footer" auto "line-footer" auto/ 1fr;
+	margin: 0 auto;
+	max-width: $global-max-width;
+	width: 100%;
+	@include breakpoint(720-up) {
+		grid: "header " auto "main" auto "footer" auto "line-footer" auto/ 1fr;
+	}
+	@include breakpoint(1280-up) {
+		grid: "header" auto "main" auto "footer" auto "line-footer" auto/ 1fr;
+	}
+}

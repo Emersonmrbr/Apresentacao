@@ -1,12 +1,16 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-copyright {
   align-self: center;
   grid-area: copyright;
   justify-self: flex-start;
   margin: 0;
-  padding: ($global-module-size * 0.2) ($global-module-size * 0.2) ($global-module-size * 0.2) 0;
-  font-size: $global-font-size-small;
-
-  @include breakpoint(640-up) {
+  padding: v(padding-default) v(padding-default) v(padding-default) 0;
+  font-size: v(font-size-default);
+  height: 100%;
+  @include breakpoint(small-up) {
     justify-self: flex-start;
   }
 }

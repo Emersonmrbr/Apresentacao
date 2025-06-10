@@ -1,14 +1,14 @@
-$componente-name: "c-top";
+$componente-name: 'c-top';
 
 .#{$componente-name} {
-	grid-area: top;
-	height: 0;
-	transition: $transition-function-header;
+  grid-area: top;
+  height: 0;
+  transition: v(transition-function-header);
 
-	@include breakpoint(1280-up) {
-		height: $global-padding-size-xxs;
-		&.has-sticker {
-			height: 0;
-		}
-	}
+  @include breakpoint(large-up) {
+    height: $global-padding-size-xxs;
+    &.has-sticker {
+      height: 0;
+    }
+  }
 }

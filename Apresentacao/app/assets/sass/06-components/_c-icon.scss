@@ -1,3 +1,7 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-icon {
   grid-area: icon;
 }

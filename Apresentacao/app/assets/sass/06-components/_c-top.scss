@@ -1,10 +1,14 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-top {
   grid-area: top;
   height: 0;
-  transition: $transition-function-header;
+  transition: v(transition-function-header);
 
-  @include breakpoint(1280-up) {
-    height: $global-padding-size-xxs;
+  @include breakpoint(large-up) {
+    height: v(padding-large);
     &.has-sticker {
       height: 0;
     }

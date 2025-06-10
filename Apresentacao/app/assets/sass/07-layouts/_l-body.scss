@@ -9,12 +9,4 @@
   margin: 0 auto;
   max-width: v(size-max-width);
   width: 100%;
-
-  @include breakpoint(small-up) {
-    grid: 'header ' auto 'main' auto 'footer' auto 'line-footer' auto/ 1fr;
-  }
-
-  @include breakpoint(large-up) {
-    grid: 'header' auto 'main' auto 'footer' auto 'line-footer' auto/ 1fr;
-  }
 }

@@ -1,3 +1,7 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-logo {
   align-items: center;
   display: flex;
@@ -6,28 +10,18 @@
   height: 100%;
   width: 100%;
   &__image {
-    transition: $transition-function-header;
-    width: ($global-module-size-xl);
-    &.has-sticker {
-      width: ($global-module-size-ssl);
-    }
-
-    @include breakpoint(800-up) {
-      width: ($global-module-size * 6);
-      &.has-sticker {
-        width: ($global-module-size * 4);
-      }
-    }
+    transition: v(transition-function-header);
+    width: v(space-10xl);
   }
 
   &__map {
-    fill: map-color(map-blue);
+    fill: color(primary);
   }
   &__nucleo {
-    fill: map-color(map-grey);
+    fill: color(tertiary);
   }
   &__description {
-    fill: map-color(map-blue);
+    fill: color(primary);
   }
   &__box-gear {
     fill: none;
@@ -35,14 +29,14 @@
   }
   &__gear {
     fill-rule: evenodd;
-    fill: map-color(map-blue);
-    stroke: map-color(map-blue);
+    fill: color(primary);
+    stroke: color(primary);
   }
   &__cicle {
-    fill: map-color(map-grey);
+    fill: color(tertiary);
   }
   &__ray {
-    fill: map-color(map-blue);
+    fill: color(primary);
     stroke: none;
   }
 }

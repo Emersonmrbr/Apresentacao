@@ -1,58 +1,54 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-card {
-  font-size: medium;
   display: flex;
   flex-direction: column;
+  font-size: v(font-size-default);
 
-  @include breakpoint(1280-up) {
-    display: grid;
-  }
   &__title {
-    text-transform: capitalize;
-    font-size: $global-font-size-medium;
+    font-size: v(font-size-default);
     grid-row: 1/2;
+    text-transform: capitalize;
     &--highlights {
+      font-size: v(font-size-default);
       text-transform: uppercase;
-      font-size: $global-font-size-medium;
-
-      @include breakpoint(640-up) {
-        font-size: $global-font-size-large;
-      }
-    }
-
-    @include breakpoint(640-up) {
-      font-size: $global-font-size-medium;
     }
   }
   &__text {
-    font-size: $global-font-size-small;
+    font-size: v(font-size-default);
     grid-row: 2/3;
     height: auto;
-    line-height: $global-line-height-medium;
+    line-height: v(line-default);
     padding: 0;
     text-align: justify;
-
-    @include breakpoint(640-up) {
-      font-size: $global-font-size-medium;
-      line-height: $global-line-height-large;
-    }
   }
   &__image {
-    width: ($global-module-size * 6);
-    height: auto;
     grid-row: 2/3;
-
-    @include breakpoint(640-up) {
-      width: ($global-module-size * 10);
-    }
-
-    @include breakpoint(800-up) {
-      width: ($global-module-size * 12);
-    }
+    height: auto;
+    width: calc(v(space-s) * 20);
   }
   &--right {
     grid-column: 2/3;
   }
   &--left {
     grid-column: 1/2;
+  }
+  &__list {
+    font-size: v(font-size-default);
+    list-style: none;
+    padding-left: v(padding-default);
+    position: relative;
+    &::before {
+      background-color: color(tertiary);
+      content: '';
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: 25%;
+      width: v(space-s);
+    }
   }
 }

@@ -1,19 +1,20 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-contact {
-  grid-area: contact;
   align-self: center;
-  justify-self: flex-start;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  grid-area: contact;
   height: 100%;
+  justify-self: flex-start;
+  width: 100%;
 
-  @include breakpoint(640-up) {
-    justify-self: flex-start;
-  }
   &__icon {
     height: 100%;
-    padding: ($global-module-size * 0.2) ($global-module-size * 0.2) ($global-module-size * 0.2) 0;
-    width: ($global-module-size);
+    padding: v(padding-small) v(padding-small) v(padding-small) 0;
+    width: v(space-xl);
   }
   &__content {
     align-self: center;
@@ -23,11 +24,12 @@
     width: 100%;
   }
   &__forced {
-    fill: map-color(map-blue);
+    fill: color(primary);
   }
   &__info {
     height: 100%;
-    padding: ($global-module-size * 0.2) 0;
+    margin: 0;
+    padding: v(padding-default);
     width: 100%;
   }
 }

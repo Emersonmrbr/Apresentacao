@@ -1,6 +1,6 @@
 html {
-	box-sizing: border-box;
-	background-color: map-color(map-html-background);
+  box-sizing: border-box;
+  background-color: map-color(map-html-background);
 }
 
 // @see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
@@ -8,19 +8,19 @@ html {
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
-	outline-offset: 0.25rem;
+  box-sizing: inherit;
+  outline-offset: 0.25rem;
 }
 
 // @see: https://css-tricks.com/revisiting-prefers-reduced-motion-the-reduced-motion-media-query/
 @media (prefers-reduced-motion: reduce), (update: slow) {
-	*,
-	::before,
-	::after {
-		animation-duration: 0.001ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.001ms !important;
-	}
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 // @see https://www.zachleat.com/web/fluid-images/
@@ -29,7 +29,7 @@ iframe,
 object,
 embed,
 video {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 img[width],
@@ -37,8 +37,8 @@ iframe[width],
 object[width],
 embed[width],
 video[width] {
-	width: auto;
-	/* Defer to max-width */
+  width: auto;
+  /* Defer to max-width */
 }
 
 img[width][height],
@@ -46,37 +46,37 @@ iframe[width][height],
 object[width][height],
 embed[width][height],
 video[width][height] {
-	height: auto;
-	/* Preserve aspect ratio */
+  height: auto;
+  /* Preserve aspect ratio */
 }
 
 /* Let SVG scale without boundaries */
-img[src$=".svg"] {
-	height: auto;
-	max-width: none;
-	// width: 100%;
+img[src$='.svg'] {
+  height: auto;
+  max-width: none;
+  // width: 100%;
 }
 
 label {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 sup,
 sub {
-	font-size: 50%;
+  font-size: 50%;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 // @see https://matthiasott.com/notes/focus-visible-is-here
 :focus:not(:focus-visible) {
-	outline: 0;
+  outline: 0;
 }
 
 // ==========================================================================
@@ -84,9 +84,21 @@ a {
 // ==========================================================================
 
 body {
-	font-family: roboto, Nunito, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-		helvetica neue, helvetica, Ubuntu, noto, arial, sans-serif;
-	font-size: $global-font-size-medium;
+  font-family:
+    roboto,
+    Nunito,
+    -apple-system,
+    BlinkMacSystemFont,
+    avenir next,
+    avenir,
+    segoe ui,
+    helvetica neue,
+    helvetica,
+    Ubuntu,
+    noto,
+    arial,
+    sans-serif;
+  font-size: v(font-size-default);
 }
 
 // Show focus styles on keyboard focus

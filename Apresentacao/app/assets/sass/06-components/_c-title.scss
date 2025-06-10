@@ -1,10 +1,14 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-title {
   text-transform: uppercase;
-  font-size: $global-font-size-medium;
-  padding-top: ($global-module-size * 0.5);
+  font-size: v(font-size-default);
+  padding-top: v(space-3xs);
 
-  @include breakpoint(640-up) {
-    font-size: $global-font-size-large;
-    padding-top: $global-module-size;
+  @include breakpoint(small-up) {
+    font-size: v(font-size-default);
+    padding-top: v(space-s);
   }
 }

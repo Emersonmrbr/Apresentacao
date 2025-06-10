@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "prettier": "3.5.3"
+  },
+  "dependencies": {
+    "utopia-core-scss": "^1.3.0"
+  }
+}

@@ -1,50 +1,50 @@
-$componente-name: "c-logo";
+$componente-name: 'c-logo';
 
 .#{$componente-name} {
-	align-items: center;
-	display: flex;
-	grid-area: logo;
-	grid-column: 1/2;
-	height: 100%;
-	width: 100%;
-	&__image {
-		transition: $transition-function-header;
-		width: ($global-module-size-xl);
-		&.has-sticker {
-			width: ($global-module-size-ssl);
-		}
+  align-items: center;
+  display: flex;
+  grid-area: logo;
+  grid-column: 1/2;
+  height: 100%;
+  width: 100%;
+  &__image {
+    transition: v(transition-function-header);
+    width: (v(space-s)-xl);
+    &.has-sticker {
+      width: (v(space-s)-ssl);
+    }
 
-		@include breakpoint(800-up) {
-			width: ($global-module-size * 6);
-			&.has-sticker {
-				width: ($global-module-size * 4);
-			}
-		}
-	}
+    @include breakpoint(small-up) {
+      width: (v(space-s) * 6);
+      &.has-sticker {
+        width: (v(space-s) * 4);
+      }
+    }
+  }
 
-	&__map {
-		fill: map-color(map-blue);
-	}
-	&__nucleo {
-		fill: map-color(map-grey);
-	}
-	&__description {
-		fill: map-color(map-blue);
-	}
-	&__box-gear {
-		fill: none;
-		stroke: none;
-	}
-	&__gear {
-		fill-rule: evenodd;
-		fill: map-color(map-blue);
-		stroke: map-color(map-blue);
-	}
-	&__cicle {
-		fill: map-color(map-grey);
-	}
-	&__ray {
-		fill: map-color(map-blue);
-		stroke: none;
-	}
+  &__map {
+    fill: color(primary);
+  }
+  &__nucleo {
+    fill: color(tertiary);
+  }
+  &__description {
+    fill: color(primary);
+  }
+  &__box-gear {
+    fill: none;
+    stroke: none;
+  }
+  &__gear {
+    fill-rule: evenodd;
+    fill: color(primary);
+    stroke: color(primary);
+  }
+  &__cicle {
+    fill: color(tertiary);
+  }
+  &__ray {
+    fill: color(primary);
+    stroke: none;
+  }
 }

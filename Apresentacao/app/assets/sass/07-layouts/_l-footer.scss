@@ -9,18 +9,15 @@
   display: grid;
   grid-area: footer;
   grid:
-    'description' v(space-6xs) 'local' v(space-6xs)
+    'description' v(space-xl) 'local' v(space-xl)
     'contact ' auto 'social-network ' auto 'copyright' auto / 1fr;
   height: auto;
   margin: 0 auto;
   max-width: v(size-max-width);
-  padding: 0 v(padding-small);
+  padding: 0 v(padding-default);
   width: 100%;
 
   @include breakpoint(small-up) {
-    grid:
-      'description local' auto 'contact social-network' calc(v(space-8xl) * 2)
-      'copyright .' auto / auto auto;
-    padding: 0 v(padding-default);
+    grid: 'description local' auto 'contact social-network' auto 'copyright .' auto / auto auto;
   }
 }

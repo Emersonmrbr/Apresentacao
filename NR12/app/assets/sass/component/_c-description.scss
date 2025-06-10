@@ -1,15 +1,15 @@
-$componente-name: "c-description";
+$componente-name: 'c-description';
 
 .#{$componente-name} {
-	align-self: center;
-	font-size: $global-font-size-medium;
-	grid-area: description;
-	height: auto;
-	justify-self: flex-start;
-	margin: 0;
-	padding: 0;
+  align-self: center;
+  font-size: v(font-size-default);
+  grid-area: description;
+  height: auto;
+  justify-self: flex-start;
+  margin: 0;
+  padding: 0;
 
-	@include breakpoint(640-up) {
-		justify-self: flex-start;
-	}
+  @include breakpoint(small-up) {
+    justify-self: flex-start;
+  }
 }

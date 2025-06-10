@@ -1,35 +1,35 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-line-header {
   display: grid;
   grid-area: line;
-  grid-template-columns: auto ($global-module-size * 2.5);
+  grid-template-columns: auto v(space-6xl);
   height: auto;
   overflow: visible;
-  transition: $transition-function-header;
+  transition: v(transition-function-header);
   width: 100%;
-  &.has-sticker {
-    height: 0;
-    padding: 0;
-  }
   &__full {
     grid-column: 1 / -1;
-    overflow: visible;
     height: 10px;
-    width: 100%;
+    overflow: visible;
     shape-rendering: crispEdges;
+    width: 100%;
     transform-origin: 100% 100%;
-    @include breakpoint(720-up) {
+    @include breakpoint(small-up) {
       grid-column: 1 / 2;
     }
   }
   &__right {
     height: 0;
-    width: 0;
     overflow: hidden;
     transform-origin: 100% 0%;
-    transition: $transition-function-header;
-    @include breakpoint(720-up) {
+    transition: v(transition-function-header);
+    width: 0;
+    @include breakpoint(small-up) {
       grid-column: 2 / 3;
-      height: 10px;
+      height: 20px;
       overflow: visible;
       width: 100%;
     }
@@ -38,17 +38,13 @@
     fill: none;
     shape-rendering: crispEdges;
     stroke-width: 0.05rem;
-    stroke: map-color(map-grey);
+    stroke: color(tertiary);
     @-moz-document url-prefix() {
       stroke-width: 1px;
     }
     &--color {
       shape-rendering: auto;
-      stroke: map-color(map-blue);
-    }
-    &.has-sticker {
-      height: 0;
-      transform: scale(0, 1);
+      stroke: color(primary);
     }
   }
 }

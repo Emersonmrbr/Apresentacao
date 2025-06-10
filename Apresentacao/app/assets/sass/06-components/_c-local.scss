@@ -1,11 +1,16 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-local {
   grid-area: local;
   align-self: center;
   justify-self: flex-start;
   padding: 0;
   margin: 0;
+  height: 100%;
 
-  @include breakpoint(640-up) {
+  @include breakpoint(small-up) {
     justify-self: flex-end;
   }
 }

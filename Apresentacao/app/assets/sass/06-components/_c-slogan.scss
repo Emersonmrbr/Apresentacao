@@ -1,12 +1,12 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
 .c-slogan {
   grid-area: slogan;
   text-transform: none;
-  font-size: $global-font-size-medium;
+  font-size: v(font-size-default);
   align-self: center;
   justify-self: center;
   font-weight: 900;
-
-  @include breakpoint(1120-up) {
-    font-size: $global-font-size-large;
-  }
 }

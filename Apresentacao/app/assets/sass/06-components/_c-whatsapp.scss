@@ -1,0 +1,16 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+@use '../01-settings/breakpoint' as *;
+
+.c-whatsapp {
+  align-self: center;
+  fill: color(primary);
+  grid-area: whatsapp;
+  justify-self: flex-end;
+  transition: v(transition-duration-exit);
+  width: v(space-xl);
+  &:hover {
+    background-color: color(solid-secondary);
+    padding: v(space-3xs);
+  }
+}

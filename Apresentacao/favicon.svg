@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    width="121"
-   height="121"
-   version="1.1"
-   id="svg92"
-   sodipodi:docname="favicon.svg"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs96" />
-  <sodipodi:namedview
-     id="namedview94"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="6.4214876"
-     inkscape:cx="60.5"
-     inkscape:cy="60.5"
-     inkscape:current-layer="gear" />
+   height="121">
   <g
      id="gear"
      transform="matrix(0.31859344,0,0,0.31859344,0.34069752,0.44513676)">

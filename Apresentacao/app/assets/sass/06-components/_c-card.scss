@@ -1,16 +1,21 @@
 @use '../02-tools/color' as *;
 @use '../02-tools/_v.scss' as *;
+@use '../02-tools/z-index' as *;
 @use '../01-settings/breakpoint' as *;
 
 .c-card {
   display: flex;
   flex-direction: column;
   font-size: v(font-size-default);
+  @include breakpoint(small-up) {
+    display: grid;
+  }
 
   &__title {
     font-size: v(font-size-default);
     grid-row: 1/2;
     text-transform: capitalize;
+    margin: 0;
     &--highlights {
       font-size: v(font-size-default);
       text-transform: uppercase;
@@ -18,11 +23,12 @@
   }
   &__text {
     font-size: v(font-size-default);
-    grid-row: 2/3;
+    // grid-row: 2/3;
     height: auto;
     line-height: v(line-default);
     padding: 0;
     text-align: justify;
+    margin: 0;
   }
   &__image {
     grid-row: 2/3;
@@ -38,17 +44,53 @@
   &__list {
     font-size: v(font-size-default);
     list-style: none;
-    padding-left: v(padding-default);
-    position: relative;
-    &::before {
-      background-color: color(tertiary);
-      content: '';
-      display: block;
-      height: 1px;
-      left: 0;
-      position: absolute;
-      top: 25%;
-      width: v(space-s);
+    margin: 0;
+    padding: 0;
+    &--text {
+      padding-left: v(space-xs);
+      line-height: v(line-default);
+      // padding: 0 0 0 v(space-xs);
+      margin: 0;
+      justify-self: flex-start;
+      text-align: justify;
+      align-self: flex-start;
+      width: 100%;
     }
+    &--item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-items: flex-start;
+    }
+    &--mark {
+      width: v(space-s);
+      height: 1px;
+      margin-top: v(space-s);
+      align-self: flex-start;
+      justify-self: flex-start;
+      &--item {
+        fill: none;
+        shape-rendering: crispEdges;
+        stroke-width: 1px;
+        stroke: color(secondary);
+        @-moz-document url-prefix() {
+          stroke-width: 2px;
+        }
+      }
+    }
+  }
+}
+svg.c-card--right {
+  margin: 0;
+  align-self: center;
+  @include breakpoint(small-up) {
+    margin-left: v(space-l);
+  }
+}
+svg.c-card--left {
+  margin: 0;
+  align-self: center;
+  @include breakpoint(small-up) {
+    margin-right: v(space-l);
   }
 }

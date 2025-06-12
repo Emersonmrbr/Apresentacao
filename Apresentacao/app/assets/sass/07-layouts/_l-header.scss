@@ -1,5 +1,6 @@
 @use '../02-tools/color' as *;
 @use '../02-tools/_v.scss' as *;
+@use '../02-tools/z-index' as *;
 @use '../01-settings/breakpoint' as *;
 
 .l-header {
@@ -16,7 +17,7 @@
   padding: 0 v(padding-default);
   transition: v(transition-function-header);
   width: 100%;
-  z-index: z-index(above);
+  z-index: z-index(default);
 
   @include breakpoint(small-up) {
     grid: 'logo menu' auto auto 'line line' auto/ 250px 1fr;

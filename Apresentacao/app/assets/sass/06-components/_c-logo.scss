@@ -1,5 +1,6 @@
 @use '../02-tools/color' as *;
 @use '../02-tools/_v.scss' as *;
+@use '../02-tools/z-index' as *;
 @use '../01-settings/breakpoint' as *;
 
 .c-logo {
@@ -11,7 +12,7 @@
   width: 100%;
   &__image {
     transition: v(transition-function-header);
-    width: v(space-10xl);
+    width: calc(v(space-s) * 15);
   }
 
   &__map {

@@ -1,5 +1,6 @@
 @use '../02-tools/color' as *;
 @use '../02-tools/_v.scss' as *;
+@use '../02-tools/z-index' as *;
 @use '../01-settings/breakpoint' as *;
 
 .c-line-header {
@@ -29,7 +30,7 @@
     width: 0;
     @include breakpoint(small-up) {
       grid-column: 2 / 3;
-      height: 20px;
+      height: 10px;
       overflow: visible;
       width: 100%;
     }

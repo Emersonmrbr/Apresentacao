@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "hint": "^7.1.13",
     "prettier": "3.5.3"
   },
   "dependencies": {

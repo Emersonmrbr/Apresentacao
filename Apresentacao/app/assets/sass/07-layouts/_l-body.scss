@@ -6,7 +6,7 @@
 .l-body {
   background-color: color(solid-secondary);
   display: grid;
-  grid: 'header ' auto 'main' auto 'footer' auto 'line-footer' auto/ 1fr;
+  grid: 'reader' v(space-xs) 'header ' auto 'main' auto 'footer' auto 'line-footer' auto/ 1fr;
   margin: 0 auto;
   max-width: v(size-max-width);
   width: 100%;

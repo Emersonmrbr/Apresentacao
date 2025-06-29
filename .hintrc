@@ -5,14 +5,14 @@
     "disown-opener": [
       "error",
       {
-        "includeSameOriginURLs": true,
-      },
+        "includeSameOriginURLs": true
+      }
     ],
     "no-inline-styles": [
       "warning",
       {
-        "requireNoStyleElement": true,
-      },
-    ],
-  },
+        "requireNoStyleElement": true
+      }
+    ]
+  }
 }

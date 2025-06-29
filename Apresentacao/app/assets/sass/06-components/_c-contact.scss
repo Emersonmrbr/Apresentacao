@@ -15,7 +15,12 @@
   &__icon {
     height: 100%;
     padding: v(padding-small) v(padding-small) v(padding-small) 0;
+    transition: v(transition-duration-exit);
     width: v(space-xl);
+    &:hover {
+      background-color: color(tertiary);
+      padding: v(space-3xs);
+    }
   }
   &__content {
     align-self: center;
@@ -23,6 +28,7 @@
     flex-direction: row;
     height: 100%;
     width: 100%;
+    text-decoration: none;
   }
   &__forced {
     fill: color(primary);
@@ -32,5 +38,6 @@
     margin: 0;
     padding: v(padding-default);
     width: 100%;
+    color: color(solid-secondary);
   }
 }

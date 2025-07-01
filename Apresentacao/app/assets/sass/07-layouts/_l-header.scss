@@ -7,8 +7,8 @@
   background-color: color(solid-secondary);
   column-gap: v(space-6xs);
   display: grid;
-  grid: 'logo whatsapp' auto 'slogan slogan' auto 'line line' auto / 1fr 1fr;
   grid-area: header;
+  grid: 'logo whatsapp' auto 'slogan slogan' auto 'line line' auto / 1fr 1fr;
   height: auto;
   justify-items: center;
   margin: 0 auto;

@@ -10,25 +10,18 @@
   grid-area: reader;
   height: v(space-xs);
   max-width: v(size-max-width);
-  opacity: 0;
+  opacity: 0.6;
   position: fixed;
   top: 0;
+  transform-origin: left;
+  transform: scale(0, 1);
   transition: v(transition-duration-exit);
-  width: 0;
+  width: 100vw;
   z-index: z-index(above);
 }
 
 @keyframes reader-bar {
-  1% {
-    width: 0;
-    // transform: translateX(-100vw);
-    opacity: 0.6;
-    transform-origin: left;
-  }
-  100% {
-    width: v(size-max-width);
-    // transform: translateX(0);
-    opacity: 0.6;
-    transform-origin: left;
+  to {
+    transform: scale(1, 1);
   }
 }

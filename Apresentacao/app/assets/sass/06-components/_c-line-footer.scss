@@ -8,6 +8,7 @@
   display: grid;
   grid-area: line-footer;
   grid-template-columns: 1fr;
+  grid-template-areas: 'full right';
   height: auto;
   margin: 0 auto;
   max-width: v(size-max-width);
@@ -16,6 +17,7 @@
     grid-template-columns: 1fr calc(v(space-s) * 10);
   }
   &__full {
+    grid-area: full;
     height: v(space-s);
     shape-rendering: crispEdges;
     width: 100%;
@@ -38,6 +40,7 @@
   }
   &__right {
     display: none;
+    grid-area: right;
     overflow: hidden;
 
     @include breakpoint(small-up) {
@@ -52,5 +55,6 @@
     height: 100%;
     overflow: visible;
     width: 100%;
+    z-index: z-index(above);
   }
 }

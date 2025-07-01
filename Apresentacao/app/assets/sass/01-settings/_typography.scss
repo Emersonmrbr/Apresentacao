@@ -28,7 +28,16 @@
       'relativeTo': 'viewport-width',
     )
   );
-  // TODO: implement a vertical rhythm
+  // Vertical rhythm implementation
+  --vertical-rhythm-base: 1.5rem;
+  --vertical-rhythm-multiplier: 1.5;
+
+  // Example rhythm steps (can be used for margin/padding)
+  --vr-1: calc(var(--vertical-rhythm-base) * 1);
+  --vr-2: calc(var(--vertical-rhythm-base) * 2);
+  --vr-3: calc(var(--vertical-rhythm-base) * 3);
+  --vr-4: calc(var(--vertical-rhythm-base) * 4);
+
   --font-size-default: var(--step--1);
   --line-height-default: 2.5;
   // @see https://systemfontstack.com/

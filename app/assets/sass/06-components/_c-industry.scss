@@ -1,0 +1,257 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+// Diagrams for the "Indústria 4.0" solution pages, used in place of an illustration.
+%diagram-caption {
+  color: color(secondary);
+  font-family: v(font-family-heading);
+  font-size: v(slide-font-xs);
+  font-weight: 700;
+  letter-spacing: v(slide-letter-spacing-caps);
+  text-transform: uppercase;
+}
+
+// OEE = Disponibilidade × Performance × Qualidade, with the classic 85% world-class example.
+.c-oee {
+  background-color: color(surface);
+  border-radius: v(slide-radius);
+  display: grid;
+  gap: v(slide-space-s);
+  padding: v(slide-space-m);
+
+  &__caption {
+    @extend %diagram-caption;
+  }
+
+  &__head {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title-small);
+    font-weight: 700;
+  }
+
+  &__value {
+    color: color(secondary);
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title-small);
+    font-weight: 800;
+  }
+
+  &__bar {
+    background-color: color(line);
+    border-radius: 999px;
+    display: block;
+    height: v(slide-space-2xs);
+    margin: v(slide-space-3xs) 0;
+    overflow: hidden;
+  }
+
+  &__fill {
+    background-color: color(primary);
+    display: block;
+    height: 100%;
+
+    &--90 {
+      width: 90%;
+    }
+
+    &--95 {
+      width: 95%;
+    }
+
+    &--99 {
+      width: 99.9%;
+    }
+  }
+
+  &__hint {
+    color: color(ink-soft);
+    font-size: v(slide-font-small);
+    margin: 0;
+  }
+
+  &__result {
+    align-items: center;
+    background-color: color(ink);
+    border-radius: v(slide-radius);
+    color: color(solid-secondary);
+    column-gap: v(slide-space-s);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: v(slide-space-s) v(slide-space-m);
+  }
+
+  &__formula {
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-default);
+    font-weight: 700;
+  }
+
+  &__total {
+    color: color(primary);
+    font-family: v(font-family-heading);
+    font-size: 3.2cqi;
+    font-weight: 800;
+    grid-row: span 2;
+    line-height: 1;
+  }
+
+  &__note {
+    color: hsl(0 0% 100% / 0.7);
+    font-size: v(slide-font-xs);
+  }
+}
+
+// Three steps (data → AI models → action on the line) plus the gains they bring.
+.c-flow {
+  display: grid;
+  gap: v(slide-space-s);
+
+  &__caption {
+    @extend %diagram-caption;
+  }
+
+  &__steps {
+    display: grid;
+    gap: v(slide-space-m);
+    margin: 0;
+    padding: 0;
+  }
+
+  &__step {
+    background-color: color(surface);
+    border-left: v(slide-bar) solid color(primary);
+    border-radius: 0 v(slide-radius) v(slide-radius) 0;
+    column-gap: v(slide-space-s);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: v(slide-space-s) v(slide-space-m);
+    position: relative;
+
+    // Arrow to the next step.
+    &:not(:last-child)::after {
+      border-left: v(slide-space-2xs) solid transparent;
+      border-right: v(slide-space-2xs) solid transparent;
+      border-top: v(slide-space-2xs) solid color(primary);
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: calc(100% + v(slide-space-2xs) * 0.5);
+      transform: translateX(-50%);
+    }
+
+    &--accent {
+      background-color: color(ink);
+      color: color(solid-secondary);
+    }
+  }
+
+  &__number {
+    color: color(primary);
+    font-family: v(font-family-heading);
+    font-size: 2.4cqi;
+    font-weight: 800;
+    grid-row: span 2;
+    line-height: 1;
+  }
+
+  &__title {
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title-small);
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__text {
+    color: color(ink-soft);
+    font-size: v(slide-font-small);
+    margin: 0;
+  }
+
+  &__step--accent &__text {
+    color: hsl(0 0% 100% / 0.8);
+  }
+
+  &__gains {
+    display: flex;
+    flex-wrap: wrap;
+    gap: v(slide-space-2xs);
+    margin: 0;
+    padding: 0;
+  }
+
+  &__gains > li {
+    background-color: color(primary);
+    border-radius: 999px;
+    color: color(ink);
+    font-size: v(slide-font-small);
+    font-weight: 500;
+    padding: v(slide-space-3xs) v(slide-space-xs);
+  }
+}
+
+// Layers from the shop floor up to management, all connected by the software we build.
+.c-stack {
+  display: grid;
+  gap: v(slide-space-s);
+
+  &__caption {
+    @extend %diagram-caption;
+  }
+
+  &__layers {
+    display: grid;
+    gap: v(slide-space-2xs);
+    margin: 0;
+    padding: 0 0 0 v(slide-space-m);
+    position: relative;
+
+    // Vertical connector along the layers.
+    &::before {
+      background: linear-gradient(color(primary), color(secondary));
+      border-radius: 999px;
+      content: '';
+      inset: v(slide-space-s) auto v(slide-space-s) 0;
+      position: absolute;
+      width: v(slide-bar);
+    }
+  }
+
+  &__layer {
+    background-color: color(surface);
+    border: 1px solid color(line);
+    border-radius: v(slide-radius);
+    display: grid;
+    padding: v(slide-space-s) v(slide-space-m);
+
+    &--top {
+      border-color: color(primary);
+    }
+
+    &--base {
+      background-color: color(ink);
+      border-color: color(ink);
+      color: color(solid-secondary);
+    }
+  }
+
+  &__name {
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title-small);
+    font-weight: 700;
+  }
+
+  &__text {
+    color: color(ink-soft);
+    font-size: v(slide-font-small);
+  }
+
+  &__layer--base &__text {
+    color: hsl(0 0% 100% / 0.8);
+  }
+}

@@ -1,0 +1,25 @@
+// Slide scale for the A4 landscape pages. Values are container query units (`cqi`),
+// resolved against each `.l-page`, so the same page scales on screen and prints at 297mm.
+// 1cqi = 1% of the page width (~2.97mm on paper).
+/* prettier-ignore */
+:root {
+  --slide-font-xs: 0.95cqi;
+  --slide-font-small: 1.2cqi;
+  --slide-font-default: 1.42cqi;
+  --slide-font-lead: 1.7cqi;
+  --slide-font-title-small: 1.55cqi;
+  --slide-font-title: 3.4cqi;
+  --slide-font-display: 4.6cqi;
+  --slide-space-3xs: 0.4cqi;
+  --slide-space-2xs: 0.8cqi;
+  --slide-space-xs: 1.2cqi;
+  --slide-space-s: 1.6cqi;
+  --slide-space-m: 2.4cqi;
+  --slide-space-l: 4cqi;
+  --slide-space-xl: 5cqi;
+  --slide-radius: 0.6cqi;
+  --slide-bar: 0.35cqi;
+  --slide-line-height: 1.5;
+  --slide-line-height-tight: 1.15;
+  --slide-letter-spacing-caps: 0.12em;
+}

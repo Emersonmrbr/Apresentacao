@@ -1,0 +1,14 @@
+@use '../02-tools/color' as *;
+
+// Illustrations were drawn with a generic violet; paint them with the brand color instead.
+.change-color-in-svg {
+  fill: color(primary);
+}
+
+// Hidden <svg> holding the <symbol>s (logo, illustrations, icons) reused through <use>.
+.u-sprite {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}

@@ -1,0 +1,57 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+.c-cases {
+  display: grid;
+  gap: v(slide-space-s);
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    border: 1px solid color(line);
+    border-radius: v(slide-radius);
+    border-top: v(slide-bar) solid color(primary);
+    display: flex;
+    flex-direction: column;
+    padding: v(slide-space-s) v(slide-space-m);
+  }
+
+  &__title {
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title-small);
+    font-weight: 700;
+    margin: 0 0 v(slide-space-3xs);
+  }
+
+  &__text {
+    color: color(ink-soft);
+    flex-grow: 1;
+    font-size: v(slide-font-small);
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  &__client {
+    color: color(secondary);
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-small);
+    font-weight: 700;
+    margin: v(slide-space-xs) 0 0;
+  }
+
+  &__tech {
+    color: color(ink-soft);
+    font-size: v(slide-font-xs);
+    margin: v(slide-space-3xs) 0 0;
+  }
+}
+
+.c-note {
+  border-left: v(slide-bar) solid color(line);
+  color: color(ink-soft);
+  font-size: v(slide-font-small);
+  font-style: italic;
+  margin: 0;
+  padding-left: v(slide-space-xs);
+}

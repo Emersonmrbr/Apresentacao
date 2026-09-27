@@ -1,0 +1,53 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+.c-features {
+  display: grid;
+  gap: v(slide-space-s);
+  grid-template-columns: repeat(3, 1fr);
+  margin: v(slide-space-2xs) 0 0;
+  padding: 0;
+
+  &--four {
+    gap: v(slide-space-xs);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &__item {
+    background-color: color(surface);
+    border-radius: v(slide-radius);
+    border-top: v(slide-bar) solid color(primary);
+    padding: v(slide-space-s) v(slide-space-m) v(slide-space-m);
+
+    &--accent {
+      background-color: color(ink);
+      color: color(solid-secondary);
+    }
+  }
+
+  &__number {
+    color: color(primary);
+    font-family: v(font-family-heading);
+    font-size: 2.4cqi;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  &__title {
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title-small);
+    font-weight: 700;
+    line-height: 1.25;
+    margin: v(slide-space-xs) 0 v(slide-space-3xs);
+  }
+
+  &__text {
+    color: color(ink-soft);
+    font-size: v(slide-font-small);
+    margin: 0;
+  }
+
+  &__item--accent &__text {
+    color: hsl(0 0% 100% / 0.8);
+  }
+}

@@ -1,0 +1,44 @@
+/* prettier-ignore */
+@use '../../../../node_modules/utopia-core-scss/src/utopia' as utopia;
+
+/* @link https://utopia.fyi/type/calculator?c=640,16,1.2,1920,24,1.333,6,6,&s=0.75|0.5,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  @include utopia.generateTypeScale(
+    (
+      'minWidth': 640,
+      'maxWidth': 1920,
+      'minFontSize': 16,
+      'maxFontSize': 24,
+      'minTypeScale': 1.2,
+      'maxTypeScale': 1.333,
+      'positiveSteps': 6,
+      'negativeSteps': 6,
+      'prefix': 'step-',
+      'relativeTo': 'viewport-width',
+    )
+  );
+  // Vertical rhythm implementation
+  --vertical-rhythm-base: 1.5rem;
+  --vertical-rhythm-multiplier: 1.5;
+
+  // Example rhythm steps (can be used for margin/padding)
+  --vr-1: calc(var(--vertical-rhythm-base) * 1);
+  --vr-2: calc(var(--vertical-rhythm-base) * 2);
+  --vr-3: calc(var(--vertical-rhythm-base) * 3);
+  --vr-4: calc(var(--vertical-rhythm-base) * 4);
+
+  --font-size-default: var(--step--1);
+  --line-height-default: 2.5;
+  // @see https://systemfontstack.com/
+  --font-family-sans-serif:
+    -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, Adwaita Sans,
+    Cantarell, Ubuntu, roboto, noto, helvetica, arial, sans-serif;
+  --font-family-serif:
+    Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times,
+    Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-family-mono:
+    Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+  --font-family-roboto: roboto, var(--font-family-sans-serif);
+  --font-family-heading: montserrat, var(--font-family-roboto);
+}

@@ -1,0 +1,12 @@
+// The PDF sent to clients is printed from this page: one A4 landscape sheet per `.l-page`.
+@page {
+  margin: 0;
+  size: A4 landscape;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

@@ -1,0 +1,63 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+// A single A4 landscape page. It is the query container for every `--slide-*` token, and its
+// padding is a percentage of the deck width, which always equals the page width.
+.l-page {
+  aspect-ratio: 297 / 210;
+  background-color: color(solid-secondary);
+  border-radius: v(radius-large);
+  box-shadow: 0 1rem 2.5rem hsl(205 45% 14% / 0.18);
+  color: color(ink);
+  container-type: inline-size;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  hyphens: manual;
+  line-height: v(slide-line-height);
+  overflow: hidden;
+  padding: 3.4% 5% 2.6%;
+  position: relative;
+
+  &::before {
+    background-color: color(primary);
+    content: '';
+    inset: 0 auto 0 0;
+    position: absolute;
+    width: 0.6%;
+  }
+
+  &--cover,
+  &--closing {
+    grid-template-rows: 1fr;
+    padding: 0;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: v(slide-space-m);
+    justify-content: center;
+    min-height: 0;
+    padding: v(slide-space-m) 0;
+
+    &--split {
+      align-items: center;
+      display: grid;
+      gap: v(slide-space-xl);
+      grid-template-columns: 1.25fr 1fr;
+    }
+  }
+
+  @media print {
+    aspect-ratio: auto;
+    border-radius: 0;
+    box-shadow: none;
+    break-after: page;
+    height: 210mm;
+    width: 297mm;
+  }
+}

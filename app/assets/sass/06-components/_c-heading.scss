@@ -1,0 +1,43 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+.c-heading {
+  &__eyebrow {
+    align-items: center;
+    color: color(secondary);
+    display: flex;
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-xs);
+    font-weight: 700;
+    gap: v(slide-space-2xs);
+    letter-spacing: v(slide-letter-spacing-caps);
+    margin: 0;
+    text-transform: uppercase;
+
+    &::before {
+      background-color: color(primary);
+      content: '';
+      height: v(slide-bar);
+      width: v(slide-space-m);
+    }
+  }
+
+  &__title {
+    color: color(ink);
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: v(slide-line-height-tight);
+    margin: v(slide-space-2xs) 0 0;
+    max-width: 62cqi;
+  }
+
+  &__lead {
+    color: color(ink-soft);
+    font-size: v(slide-font-lead);
+    line-height: v(slide-line-height);
+    margin: v(slide-space-xs) 0 0;
+    max-width: 64cqi;
+  }
+}

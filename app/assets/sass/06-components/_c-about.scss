@@ -1,0 +1,66 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+.c-about {
+  margin-top: v(slide-space-m);
+
+  &__title {
+    color: color(ink);
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title-small);
+    font-weight: 700;
+    margin: v(slide-space-s) 0 v(slide-space-3xs);
+  }
+
+  &__text {
+    color: color(ink-soft);
+    font-size: v(slide-font-default);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.c-stats {
+  &__grid {
+    display: grid;
+    gap: v(slide-space-s);
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+  }
+
+  &__item {
+    background-color: color(surface);
+    border-left: v(slide-bar) solid color(primary);
+    border-radius: 0 v(slide-radius) v(slide-radius) 0;
+    padding: v(slide-space-s) v(slide-space-s) v(slide-space-s) v(slide-space-m);
+  }
+
+  &__value {
+    color: color(secondary);
+    font-family: v(font-family-heading);
+    font-size: 4.2cqi;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  &__label {
+    color: color(ink-soft);
+    font-size: v(slide-font-small);
+    line-height: 1.4;
+    margin: v(slide-space-2xs) 0 0;
+  }
+
+  &__motto {
+    background-color: color(ink);
+    border-radius: v(slide-radius);
+    color: color(solid-secondary);
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-small);
+    font-weight: 700;
+    letter-spacing: v(slide-letter-spacing-caps);
+    margin: v(slide-space-s) 0 0;
+    padding: v(slide-space-s);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

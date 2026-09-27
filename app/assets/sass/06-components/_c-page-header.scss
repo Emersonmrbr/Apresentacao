@@ -1,0 +1,39 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+.c-page-header {
+  align-items: center;
+  border-bottom: 1px solid color(line);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: v(slide-space-xs);
+
+  &__logo {
+    width: 14cqi;
+  }
+
+  &__section {
+    color: color(ink-soft);
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-xs);
+    font-weight: 600;
+    letter-spacing: v(slide-letter-spacing-caps);
+    text-transform: uppercase;
+  }
+}
+
+.c-page-footer {
+  align-items: center;
+  border-top: 1px solid color(line);
+  color: color(ink-soft);
+  display: flex;
+  font-size: v(slide-font-xs);
+  justify-content: space-between;
+  padding-top: v(slide-space-xs);
+
+  &__number {
+    color: color(secondary);
+    font-family: v(font-family-heading);
+    font-weight: 700;
+  }
+}

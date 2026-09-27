@@ -1,0 +1,127 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+.c-closing {
+  display: grid;
+  grid-template-columns: 56fr 44fr;
+  height: 100%;
+
+  &__why {
+    display: flex;
+    flex-direction: column;
+    gap: v(slide-space-l);
+    justify-content: center;
+    padding: v(slide-space-l) v(slide-space-l) v(slide-space-l) v(slide-space-xl);
+    position: relative;
+  }
+
+  // Logo pinned to the top so the argument block stays vertically centered.
+  &__why > .c-logo {
+    left: v(slide-space-xl);
+    position: absolute;
+    top: v(slide-space-l);
+  }
+
+  &__contact {
+    background:
+      radial-gradient(circle at 80% 10%, hsl(200 74% 55% / 0.3), transparent 55%),
+      color(ink);
+    color: color(solid-secondary);
+    display: flex;
+    flex-direction: column;
+    padding: v(slide-space-l);
+  }
+
+  &__title {
+    font-family: v(font-family-heading);
+    font-size: 2.8cqi;
+    font-weight: 800;
+    line-height: v(slide-line-height-tight);
+    margin: auto 0 0;
+  }
+
+  &__lead {
+    color: hsl(0 0% 100% / 0.8);
+    font-size: v(slide-font-default);
+    margin: v(slide-space-xs) 0 v(slide-space-m);
+  }
+
+  &__copyright {
+    color: hsl(0 0% 100% / 0.55);
+    font-size: v(slide-font-xs);
+    line-height: 1.6;
+    margin: auto 0 0;
+  }
+}
+
+.c-reasons {
+  display: grid;
+  gap: v(slide-space-m);
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    border-top: 1px solid color(line);
+    position: relative;
+    padding-top: v(slide-space-xs);
+
+    &::before {
+      background-color: color(primary);
+      content: '';
+      height: v(slide-bar);
+      left: 0;
+      position: absolute;
+      top: -1px;
+      width: v(slide-space-l);
+    }
+  }
+
+  &__title {
+    font-family: v(font-family-heading);
+    font-size: v(slide-font-title-small);
+    font-weight: 700;
+    margin: 0 0 v(slide-space-3xs);
+  }
+
+  &__text {
+    color: color(ink-soft);
+    font-size: v(slide-font-small);
+    margin: 0;
+  }
+}
+
+.c-contact {
+  display: grid;
+  gap: v(slide-space-s);
+  margin: 0;
+  padding: 0;
+
+  &__link {
+    align-items: center;
+    color: inherit;
+    column-gap: v(slide-space-s);
+    display: grid;
+    grid-template-columns: 3.4cqi 1fr;
+    text-decoration: none;
+  }
+
+  &__icon {
+    aspect-ratio: 1;
+    fill: color(primary);
+    grid-row: span 2;
+    width: 100%;
+  }
+
+  &__label {
+    color: hsl(0 0% 100% / 0.6);
+    font-size: v(slide-font-xs);
+    letter-spacing: v(slide-letter-spacing-caps);
+    text-transform: uppercase;
+  }
+
+  &__info {
+    font-size: v(slide-font-default);
+    font-weight: 500;
+  }
+}

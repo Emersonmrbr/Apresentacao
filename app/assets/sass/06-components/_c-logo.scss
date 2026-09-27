@@ -1,0 +1,26 @@
+@use '../02-tools/color' as *;
+@use '../02-tools/_v.scss' as *;
+
+// The logo lives once in the page sprite (`#logo`) and is drawn with <use>. Colors come from
+// custom properties so a dark background can recolor it: set --logo-text on the <svg>.
+.c-logo {
+  aspect-ratio: 1921 / 380;
+  display: block;
+  height: auto;
+
+  &__map,
+  &__ray {
+    fill: var(--logo-accent, #{color(primary)});
+  }
+
+  &__nucleo,
+  &__cicle {
+    fill: var(--logo-text, #{color(tertiary)});
+  }
+
+  &__gear {
+    fill-rule: evenodd;
+    fill: var(--logo-accent, #{color(primary)});
+    stroke: var(--logo-accent, #{color(primary)});
+  }
+}
